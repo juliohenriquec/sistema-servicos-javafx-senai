@@ -89,8 +89,8 @@ public class CadastroTecnicoController {
     private void salvarAlteracoes() {
         Long id = !idField.getText().trim().isEmpty() ? Long.valueOf(idField.getText().trim()) : null;
         Double salario = !salarioField.getText().isEmpty() ? Double.valueOf(salarioField.getText().trim()) : null;
-        TecnicoDto tecnicoDto = new TecnicoDto(id, nomeField.getText().trim(), emailField.getText().trim(), senhaField.getText().trim(), cpfField.getText().trim(), salario);
-        if (tecnicoDto.getId() == null) {
+        TecnicoDto tecnicoDto = new TecnicoDto(id, nomeField.getText().trim(), emailField.getText().trim(), senhaField.getText().trim(), cpfField.getText().trim(), salario, dataCriacaoField.getValue());
+        if (tecnicoDto.getId() == null ) {
             tecnicoService.criar(tecnicoDto); // Adiciona novo técnico
         } else {
             tecnicoService.atualizar(tecnicoDto); // Atualiza técnico existente
@@ -107,6 +107,9 @@ public class CadastroTecnicoController {
             cpfField.setText(tecnicoDto.getCpf());
             salarioField.setText(String.valueOf(tecnicoDto.getSalario()));
             dataCriacaoField.setValue(tecnicoDto.getDataCriacao());
+            if (tecnicoDto.getDataCriacao() != null) {
+                dataCriacaoField.setValue(tecnicoDto.getDataCriacao());
+            }
         }
     }
 

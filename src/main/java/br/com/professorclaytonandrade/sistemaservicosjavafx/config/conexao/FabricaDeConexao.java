@@ -18,7 +18,7 @@ public class FabricaDeConexao {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl("jdbc:mysql://localhost:3306/sistema_servico");
         config.setUsername("root");
-        config.setPassword("");
+        config.setPassword("root");
         config.setMaximumPoolSize(10); // Máximo de conexões simultâneas
         config.setMinimumIdle(2); // Número mínimo de conexões ociosas
         config.setIdleTimeout(30000); // Tempo ocioso antes de fechar uma conexão

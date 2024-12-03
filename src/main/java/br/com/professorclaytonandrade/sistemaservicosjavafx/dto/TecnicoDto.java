@@ -15,7 +15,7 @@ public class TecnicoDto {
     private LocalDate dataCriacao;
 
 
-    public TecnicoDto(Long id, String nome, String email, String senha, String cpf, Double salario) {
+    public TecnicoDto(Long id, String nome, String email, String senha, String cpf, Double salario, LocalDate dataCriacao) {
         validarCampos(nome, email, senha, cpf, salario);
         this.id = id;
         this.nome = nome;
@@ -23,6 +23,7 @@ public class TecnicoDto {
         this.senha = senha;
         this.cpf = cpf;
         this.salario = salario;
+        this.dataCriacao = dataCriacao;
     }
 
     public TecnicoDto(Tecnico tecnico) {
