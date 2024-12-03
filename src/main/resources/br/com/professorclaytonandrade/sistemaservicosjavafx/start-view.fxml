@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="740.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.professorclaytonandrade.sistemaservicosjavafx.controller.StartViewController">
+   <children>
+      <MenuBar minHeight="35.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastro">
+            <items>
+              <MenuItem fx:id="menuItemCadastroTecnico" mnemonicParsing="false" onAction="#mostrarCadastroTecnico" text="Cadastro Técnico" />
+                  <MenuItem fx:id="menuItemCadastroCliente" mnemonicParsing="false" text="Cadastro Cliente" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Consulta">
+               <items>
+                  <MenuItem fx:id="menuItemCadastroTecnico1" mnemonicParsing="false" onAction="#mostrarConsultaTecnico" text="Consulta Técnico" />
+                  <MenuItem fx:id="menuItemCadastroCliente1" mnemonicParsing="false" text="Consulta Cliente" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Ordem Serviço">
+            <items>
+              <MenuItem fx:id="menuItemNovoChamado" mnemonicParsing="false" text="Novo Chamado" />
+            </items>
+          </Menu>
+        </menus>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="722.0" prefWidth="1025.0" />
+   </children>
+</VBox>
