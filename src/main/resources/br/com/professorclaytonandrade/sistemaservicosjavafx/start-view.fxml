@@ -21,7 +21,7 @@
             <Menu mnemonicParsing="false" text="Consulta">
                <items>
                   <MenuItem fx:id="menuItemCadastroTecnico1" mnemonicParsing="false" onAction="#mostrarConsultaTecnico" text="Consulta Técnico" />
-                  <MenuItem fx:id="menuItemCadastroCliente1" mnemonicParsing="false" text="Consulta Cliente" />
+                  <MenuItem fx:id="menuItemCadastroCliente1" mnemonicParsing="false" onAction="#mostrarConsultaCliente" text="Consulta Cliente" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Ordem Serviço">
