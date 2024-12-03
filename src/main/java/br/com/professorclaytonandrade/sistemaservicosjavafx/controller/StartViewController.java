@@ -26,6 +26,10 @@ public class StartViewController {
     public void mostrarCadastroTecnico() throws IOException {
         Util.janelaModal(globalAnchorPane, "cadastro-tecnico.fxml", "Cadastro Técnico");
     }
+    @FXML
+    public void mostrarCadastroCliente() throws IOException {
+        Util.janelaModal(globalAnchorPane, "cadastro-cliente.fxml", "Cadastro Cliente");
+    }
 
     @FXML
     public void mostrarConsultaTecnico() throws IOException {
