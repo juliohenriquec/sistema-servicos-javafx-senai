@@ -28,6 +28,10 @@ public class Cliente extends Pessoa {
         this.telefone = clienteDto.getTelefone();
     }
 
+    public Cliente(Long id) {
+        this.id = id;
+    }
+
     public String getTelefone() {
         return telefone;
     }

@@ -1,8 +1,11 @@
 package br.com.professorclaytonandrade.sistemaservicosjavafx.dto;
 
+import br.com.professorclaytonandrade.sistemaservicosjavafx.model.Chamado;
 import br.com.professorclaytonandrade.sistemaservicosjavafx.model.Cliente;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteDto {
     private Long id;
@@ -12,6 +15,16 @@ public class ClienteDto {
     private String cpf;
     private String telefone;
     private LocalDate dataCriacao;
+
+    private List<Chamado> chamados = new ArrayList<>();
+
+    public ClienteDto() {
+
+    }
+
+    public void addChamado(Chamado chamado) {
+        chamados.add(chamado);
+    }
 
     public ClienteDto(Long id, String nome, String email, String senha, String cpf, String telefone, LocalDate dataCriacao) {
         validarCampos(nome, email, senha, cpf, telefone);

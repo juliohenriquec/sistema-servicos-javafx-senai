@@ -30,6 +30,10 @@ public class StartViewController {
     public void mostrarCadastroCliente() throws IOException {
         Util.janelaModal(globalAnchorPane, "cadastro-cliente.fxml", "Cadastro Cliente");
     }
+    @FXML
+    public void mostrarCadastroChamado() throws IOException {
+        Util.janelaModal(globalAnchorPane, "cadastro-chamado.fxml", "Cadastro Chamado");
+    }
 
     @FXML
     public void mostrarConsultaTecnico() throws IOException {
@@ -39,6 +43,10 @@ public class StartViewController {
     @FXML
     public void mostrarConsultaCliente() throws IOException {
         Util.janelaModal(globalAnchorPane, "consulta-cliente.fxml", "Consulta Cliente");
+    }
+    @FXML
+    public void mostrarConsultaChamado() throws IOException {
+        Util.janelaModal(globalAnchorPane, "consulta-chamado.fxml", "Consulta Chamado");
     }
 
     public static <T> boolean mostrarTelaEditar(String telaEdicao, String tituloTela, T objeto, Object controller) throws IOException {

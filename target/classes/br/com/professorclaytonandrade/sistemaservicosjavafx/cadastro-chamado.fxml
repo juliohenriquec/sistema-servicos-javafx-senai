@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="519.0" xmlns:fx="http://javafx.com/fxml" fx:controller="br.com.professorclaytonandrade.sistemaservicosjavafx.controller.CadastroChamadoController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="370.0" prefWidth="500.0" spacing="10" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="10">
+            <!-- Título -->
+            <Label text="Cadastro de Chamados" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+            <!-- Formulário -->
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="120" />
+                    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                </columnConstraints>
+
+                <!-- Campo ID -->
+                <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="Automático" editable="false" />
+
+                <!-- Campo Título -->
+                <Label text="Título:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="tituloField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Título do chamado" />
+
+                <!-- Campo Observações -->
+                <Label text="Observações:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextArea fx:id="observacoesArea" GridPane.rowIndex="2" GridPane.columnIndex="1" promptText="Descrição do problema" prefRowCount="3" />
+
+                <!-- Campo Prioridade -->
+                <Label text="Prioridade:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <ComboBox fx:id="prioridadeComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="Selecione a prioridade" />
+
+                <!-- Campo Status -->
+                <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <ComboBox fx:id="statusComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="Selecione o status" />
+
+                <!-- Campo Técnico ID -->
+                <Label text="Técnico ID:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                <TextField fx:id="tecnicoIdField" GridPane.rowIndex="5" GridPane.columnIndex="1" promptText="ID do técnico responsável" />
+
+                <!-- Campo Cliente ID -->
+                <Label text="Cliente ID:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+                <TextField fx:id="clienteIdField" GridPane.rowIndex="6" GridPane.columnIndex="1" promptText="ID do cliente" />
+
+                <!-- Campo Data de Abertura -->
+                <Label text="Data de Abertura:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+                <DatePicker fx:id="dataAberturaField" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+                <!-- Campo Data de Fechamento -->
+                <Label text="Data de Fechamento:" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+                <DatePicker fx:id="dataFechamentoField" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+            </GridPane>
+
+            <!-- Botões -->
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button fx:id="cancelarButton" text="Cancelar" onAction="#cancelar" />
+                <Button fx:id="salvarButton" text="Salvar" onAction="#salvar" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

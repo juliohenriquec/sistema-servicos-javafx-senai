@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="550.0" prefWidth="984.0" xmlns:fx="http://javafx.com/fxml" fx:controller="br.com.professorclaytonandrade.sistemaservicosjavafx.controller.ConsultaCadastroController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="380.0" prefWidth="580.0" spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <TableView fx:id="tableView" layoutX="14.0" layoutY="49.0" prefHeight="400.0" prefWidth="600.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="75.0" />
+                    <TableColumn fx:id="tituloColumn" text="Título" prefWidth="150.0" />
+                    <TableColumn fx:id="descricaoColumn" text="Descrição" prefWidth="200.0" />
+                    <TableColumn fx:id="prioridadeColumn" text="Prioridade" prefWidth="100.0" />
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="100.0" />
+                    <TableColumn fx:id="dataAberturaColumn" text="Data Abertura" prefWidth="100.0" />
+                    <TableColumn fx:id="dataFechamentoColumn" text="Data Fechamento" prefWidth="100.0" />
+                </columns>
+            </TableView>
+
+            <Button fx:id="editarButton" text="Editar" layoutX="14.0" layoutY="470.0" onAction="#editar" />
+            <Button fx:id="voltarButton" text="Voltar" layoutX="100.0" layoutY="470.0" onAction="#voltar" />
+        </VBox>
+    </children>
+</AnchorPane>

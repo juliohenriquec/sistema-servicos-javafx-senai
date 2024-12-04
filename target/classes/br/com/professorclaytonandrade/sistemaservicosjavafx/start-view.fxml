@@ -26,7 +26,8 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Ordem Serviço">
             <items>
-              <MenuItem fx:id="menuItemNovoChamado" mnemonicParsing="false" text="Novo Chamado" />
+              <MenuItem fx:id="menuItemNovoChamado" mnemonicParsing="false" onAction="#mostrarCadastroChamado" text="Novo Chamado" />
+                <MenuItem fx:id="menuItemNovoChamado1" mnemonicParsing="false" onAction="#mostrarConsultaChamado" text="Consulta Chamado" />
             </items>
           </Menu>
         </menus>

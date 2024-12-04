@@ -1,8 +1,11 @@
 package br.com.professorclaytonandrade.sistemaservicosjavafx.dto;
 
+import br.com.professorclaytonandrade.sistemaservicosjavafx.model.Chamado;
 import br.com.professorclaytonandrade.sistemaservicosjavafx.model.Tecnico;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TecnicoDto {
 
@@ -13,6 +16,12 @@ public class TecnicoDto {
     private String cpf;
     private Double salario;
     private LocalDate dataCriacao;
+
+    private List<Chamado> chamados = new ArrayList<>();
+
+    public void addChamado(Chamado chamado) {
+        chamados.add(chamado);
+    }
 
 
     public TecnicoDto(Long id, String nome, String email, String senha, String cpf, Double salario, LocalDate dataCriacao) {

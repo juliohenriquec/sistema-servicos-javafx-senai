@@ -1,4 +1,4 @@
-package br.com.clayton.sistemadeservicos.model;
+package br.com.professorclaytonandrade.sistemaservicosjavafx.model;
 
 import br.com.professorclaytonandrade.sistemaservicosjavafx.enuns.Prioridade;
 import br.com.professorclaytonandrade.sistemaservicosjavafx.enuns.Status;

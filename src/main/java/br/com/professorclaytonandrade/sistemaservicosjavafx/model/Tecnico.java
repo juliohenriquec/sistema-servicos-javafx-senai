@@ -28,6 +28,10 @@ public class Tecnico extends Pessoa{
         this.salario = tecnicoDto.getSalario();
     }
 
+    public Tecnico(Long id) {
+        this.id = id;
+    }
+
     public Double getSalario() {
         return salario;
     }
